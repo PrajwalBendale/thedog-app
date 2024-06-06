@@ -7,6 +7,7 @@ import Box from "@mui/material/Box";
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Autocomplete, Card, ListItem, TextField } from "@mui/material";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 function Home() {
   const [dogs, setDogs] = useState([]);
@@ -58,6 +59,7 @@ function Home() {
   return (
     <>
       <Container>
+        <SpeedInsights />
         <Box sx={{ m: 2 }}>
           <Typo variant="h2">Welcome to Dog Info.</Typo>
         </Box>
