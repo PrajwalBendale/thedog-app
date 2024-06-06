@@ -16,20 +16,18 @@ function Home() {
   //const [searched, setSearched] = useState(false);
   const navigate = useNavigate();
 
+  const fetchDogData = async () => {
+    try {
+      const res = await fetch("https://api.thedogapi.com/v1/breeds");
+      const data = await res.json();
+      const names = data.map((item) => item.name); // Extract names
+      setOptions(names);
+      setDogs(data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
   useEffect(() => {
-    const fetchDogData = async () => {
-      try {
-        const res = await fetch("https://api.thedogapi.com/v1/breeds");
-        const data = await res.json();
-        const names = data.map((item) => item.name); // Extract names
-        setOptions(names);
-        setDogs(data);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-
-    //setSearched(false);
     fetchDogData();
   }, []);
 
