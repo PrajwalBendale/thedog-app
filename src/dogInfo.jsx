@@ -84,7 +84,7 @@ function DogInfo() {
             </Card>
           );
         })}
-        <Button variant="outlined" href="/">
+        <Button sx={{ m: 1 }} variant="outlined" href="/">
           Back
         </Button>
       </Container>
