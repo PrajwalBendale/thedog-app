@@ -78,7 +78,7 @@ function DogInfo() {
                   weight : {item.weight.metric} Kgs
                 </Typography>
                 <Typography textTransform={"capitalize"}>
-                  height : {item.height.metric} inchs
+                  height : {item.height.metric} cm
                 </Typography>
               </Grid2>
             </Card>
