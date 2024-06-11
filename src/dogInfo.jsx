@@ -48,7 +48,7 @@ function DogInfo() {
                   {item.name}
                 </Typography>
                 <CardMedia>
-                  <img
+                  //<img
                     style={{ width: 320, height: 320 }}
                     //https://cdn2.thedogapi.com/images/BJa4kxc4X_1280.jpg, https://cdn2.thedogapi.com/images/BJa4kxc4X.jpg
                     src={
